@@ -1,0 +1,132 @@
+body {
+	overflow	: hidden;
+	padding		: 0;
+	margin		: 0;
+
+	color		: #eee;
+	background-color: #333;
+	font-family	: arial;
+	font-size	: 100%;
+}
+
+.clearfix {
+	clear:both;
+}
+
+
+h6 {
+	margin: 5px 0px;
+}
+
+
+.ui div {
+	margin: 10px 0px;
+}
+
+.float-right {
+	float:right;
+}
+#top,#sidebar,#statusbar {
+	color: #eee;
+	padding: 5px;
+}
+
+#top {
+	height: 80px;
+	background-color: #222;
+	border-bottom: 1px solid #555;
+}
+
+#editor {
+	height: 100%;
+}
+
+#middle {
+	height: 100%;
+}
+
+#viewport {
+	float:left;
+	width: 80%;
+}
+
+#sidebar {
+	float: right;
+	width: 300px;
+	background-color: #222;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	border-left: 1px solid #555;
+}
+
+#statusbar {
+	position: absolute;
+	bottom: 0px;
+	height: 20px;
+	background-color: #222;
+	width: 100%;
+	border-top: 1px solid #555;
+}
+
+.ui {
+	padding: 10px;
+}
+
+
+#log {
+	position: absolute;
+	bottom: 31px;
+	left: 0px;
+	background-color: #222;
+	width: 300px;
+
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+#log #messages div,#log-header {
+	padding: 1px 5px;
+	border-top: 1px solid #555;
+	border-right: 1px solid #555;
+	border-left: 1px solid #555;
+}
+
+#log #messages {
+	max-height: 300px;
+	overflow-y: auto;
+}
+
+#log #messages .log-time {
+	float: right;
+	font-size: 70%;
+	font-style: italic;
+}
+
+#log-header {
+	background-color: #565656;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+.logger-critical {
+	background-color: #b22;
+}
+
+
+#textures {
+	width: 250px;
+	float: left;
+	height: 100%;
+}
+
+#texturebox {
+	overflow: hidden;
+	margin: 0px;
+	padding: 0px;
+}
+
+#textures-scrollbar {
+	float:right;
+	margin-top: 20px;
+	margin-right: 5px;
+}

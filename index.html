@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Material Editor</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+			
+		<script src="vendor/tquery-bundle.js"></script>
+		
+		<link type="text/css" href="css/dark-hive/jquery-ui-1.8.17.custom.css" rel="stylesheet" />	
+		<script type="text/javascript" src="vendor/jquery-1.7.1.min.js"></script>
+		<script type="text/javascript" src="vendor/jquery-ui-1.8.17.custom.min.js"></script>
+
+		<script type="text/javascript" src="vendor/taffy.js"></script>
+
+		<script type="text/javascript" src="vendor/farbtastic.js"></script>
+		<link rel="stylesheet" href="css/farbtastic.css" type="text/css" />
+
+		<script type="text/javascript" src="/nowjs/now.js"></script>
+
+		<link  href="css/global.css" rel="stylesheet"/>
+		<script type="text/javascript" src="js/helpers.js"></script>
+		<script type="text/javascript" src="js/Logger.js"></script>
+		<script type="text/javascript" src="js/vars.js"></script>
+		<script type="text/javascript" src="js/niftue.js"></script>
+		<script type="text/javascript" src="js/UI.js"></script>
+
+		<style type="text/css">
+
+		</style>
+	</head>
+<body>
+
+	<div id="editor">
+		<div id="top">TOP</div>
+
+		<div id="middle">
+	    	<div id="viewport"></div>
+	    	<div id="log">
+	    		<div id="log-header">Log Window <span class="ui-icon ui-icon-carat-1-s float-right">&nbsp;</span></div>
+	    		<div id="messages"></div>
+	    	</div>
+
+
+	    	</div>
+	    	<div id="sidebar">
+	    		<div class="ui">
+	    			<h5>sidebar</h5>
+	    			<h6>Rotation Speed</h6>
+	    			<div id="speed"></div>
+	    			<h6>Shininess</h6>
+	    			<div id="shininess"></div>
+	    			<h6>Color</h6>
+	    			<div id="color"></div>
+
+
+	    			<hr>
+	    			<h6>Textures</h6>
+	    			<div id="texturebox">
+		    			<div id="textures">
+		    			</div>
+
+		    			<div id="textures-scrollbar">
+		    			</div>
+		    		</di>
+	    		</div>
+
+
+	    	</div>
+	    	<br class="clearfix">
+	    </div>
+
+	    <div id="statusbar">Ready</div>
+
+
+		<script type="text/javascript">
+		var logger = new Logger($("#log"));
+		$("#messages").slideUp();
+		logger.log("initializing");
+		var screenheight = window.innerHeight,
+			screenwidth = window.innerWidth;
+
+		var viewport = $("#viewport");
+		viewport.height(screenheight-100);
+		viewport.width(screenwidth-311);
+		$("#sidebar").height(screenheight-101);
+		$("#statusbar").width(screenwidth-10);
+
+
+		//logger.critical("critical");
+
+		$("#log-header").click(function(event){
+			logger.stayOpen = false;
+			logger.toggle();
+		});
+
+
+		logger.log("done");
+
+
+
+		</script>
+</body>
+</html>
